@@ -142,40 +142,40 @@
     </div>
 </header>
 <!-- Our Collections / Intro -->
-<section class="py-24 bg-surface">
+<!-- Our Collections / Intro -->
+<section class="py-24 bg-surface" id="oppettider">
     <div class="container mx-auto px-4 md:px-8">
-        <div class="bg-surface-container-lowest/50 border-2 border-[#77591a] rounded-sm shadow-xl p-8 md:p-16 relative overflow-hidden">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative z-10">
-                <div class="md:col-span-5 space-y-8">
-                <h2 class="font-headline text-4xl text-on-surface leading-snug">Öppettider<br/></h2>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-5">
+                <div class="bg-surface-container-lowest border-2 border-[#77591a] rounded-sm shadow-xl p-8 md:p-12 space-y-8">
+                    <p class="text-on-surface-variant leading-relaxed italic border-l-4 border-secondary pl-6">
+                        Måndagar <span class="ml-5">Stängt.</span>
+                    </p>
 
-                <p class="text-on-surface-variant leading-relaxed italic border-l-4 border-secondary pl-6">
-                    Måndagar <span class="ml-5">Stängt.</span>
-                </p>
+                    <p class="text-on-surface-variant">
+                        Tis – Fre <span class="ml-5">11.00 – 20.00.</span>
+                    </p>
 
-                <p class="text-on-surface-variant">
-                    Tis – Fre <span class="ml-5">11.00 – 20.00.</span>
-                </p>
+                    <p class="text-on-surface-variant">
+                        Lör – Sön <span class="ml-5">13.00 – 20.00.</span>
+                    </p>
 
-                <p class="text-on-surface-variant">
-                    Lör – Sön <span class="ml-5">13.00 – 20.00.</span>
-                </p>
+                    <p class="text-on-surface-variant">
+                        Lunch (Tis – Fre) <span class="ml-5">kl 11.00 – 14.00.</span>
+                    </p>
 
-                <p class="text-on-surface-variant">
-                    Lunch (Tis – Fre) <span class="ml-5">kl 11.00 – 14.00.</span>
-                </p>
+                    <p class="text-on-surface-variant/75">
+                        Beställningsstopp kan uppstå innan stängningstiden.
+                    </p>
 
-                <p class="text-on-surface-variant/75">
-                    Beställningsstopp kan uppstå innan stängningstiden.
-                </p>
-
-                <p class="text-on-surface-variant">
-                    OBS! Stängda dagar: <span class="ml-5">23–25 dec, 31 dec, 1 jan.</span>
-                </p>
+                    <p class="text-on-surface-variant">
+                        OBS! Stängda dagar: <span class="ml-5">23–25 dec, 31 dec, 1 jan.</span>
+                    </p>
+                </div>
             </div>
             <div class="md:col-span-7 grid grid-cols-2 gap-4">
                 <!-- Carousel Container 1 -->
-                <div class="relative w-full h-80 overflow-hidden rounded-sm shadow-xl mt-12 group" id="carousel-1">
+                <div class="relative w-full h-80 overflow-hidden rounded-sm shadow-xl group" id="carousel-1">
                     <img class="fade-image ken-burns absolute inset-0 w-full h-full object-cover opacity-100" data-alt="vibrant red thai curry" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIehRAUzLw81pvXoPo3RhL3-7al6XpLgVahhAwRLwReF3iow77t4lP9sgboiJSV5dz044-m3imGC382DTU-bK6NrJaLGcS0dmdMKR_0412i28vVANUL8Gc-LzpMuDlibbJvks94bWuIOEZUwZ-dEmEde4ruk723k6FsoTRef5bq6GWIhIrtJEm-wG4xb2TnexUrEVNKidcwWjcel_gmH1HJEtGF8EhhLSSO8G6BIhbzgPUJx1ohpPfJfeptKjEWWsdqvHfAhH1NZIA"/>
                     <img class="fade-image ken-burns absolute inset-0 w-full h-full object-cover opacity-0" data-alt="tom yum soup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY9T-N3L9B9O_R-l3_jB_m2H6S_n-B7W8WpG4gWv_S8_7j-q_L-W9Y6w_K=s0"/>
                     <img class="fade-image ken-burns absolute inset-0 w-full h-full object-cover opacity-0" data-alt="green curry" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9_v7V9Y_X_S-n9V7X_O-v9Y7V9_W=s0"/>
@@ -908,15 +908,19 @@
 </footer>
 <script>
     // Image Carousel Logic
+
     function setupCarousel(containerId) {
         const container = document.getElementById(containerId);
+        if (!container) return;
         const images = container.querySelectorAll('.fade-image');
         let currentIndex = 0;
 
         setInterval(() => {
-            images[currentIndex].classList.replace('opacity-100', 'opacity-0');
-            currentIndex = (currentIndex + 1) % images.length;
-            images[currentIndex].classList.replace('opacity-0', 'opacity-100');
+            if (images.length > 0) {
+                images[currentIndex].classList.replace('opacity-100', 'opacity-0');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.replace('opacity-0', 'opacity-100');
+            }
         }, 6000); // 6 seconds per image (includes transition time)
     }
 
