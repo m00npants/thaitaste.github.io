@@ -97,6 +97,11 @@
         .fade-image {
             transition: opacity 2s ease-in-out;
         }
+        .elegant-frame {
+            border: 1px solid #77591a;
+            outline: 4px double #77591a;
+            outline-offset: 4px;
+        }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body antialiased">
@@ -114,7 +119,7 @@
             <a class="text-[#1c1c17]/70 dark:text-[#fdf9f0]/70 hover:text-[#840f16] transition-colors duration-300" href="#contact">Hitta hit</a>
         </div>
         <a
-                class="bg-primary text-on-primary px-6 py-2 rounded-full font-serif tracking-widest uppercase text-sm shadow-md hover:bg-primary-container transition-all"
+                class="bg-[#77591a] text-on-primary px-6 py-2 rounded-full font-serif tracking-widest uppercase text-sm shadow-md hover:bg-primary-container transition-all"
                 href="tel:0480421940">
             Tel. 0480 - 42 19 40
         </a>
@@ -123,7 +128,7 @@
 </nav>
 <!-- Hero Section -->
 <header class="relative min-h-screen flex items-center pt-20 overflow-hidden">
-    <div class="absolute inset-0 z-0"><img class="w-full h-full object-cover"  src="./images/orangelogo.png"/><div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div></div>
+    <div class="absolute inset-0 z-0"><img class="w-full h-full object-cover"  src="./images/orangelogo.png"/><div class="absolute inset-0 bg-gradient-to-r from-background via-background/10 to-transparent"></div></div>
 
     <div class="container mx-auto px-8 relative z-10">
         <div class="max-w-2xl">
@@ -137,10 +142,11 @@
     </div>
 </header>
 <!-- Our Collections / Intro -->
-<section class="py-24 bg-surface-container-low" id="oppettider" >
-    <div class="container mx-auto px-8">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-            <div class="md:col-span-5 space-y-8">
+<section class="py-24 bg-surface">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="bg-surface-container-lowest/50 border-2 border-[#77591a] rounded-sm shadow-xl p-8 md:p-16 relative overflow-hidden">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative z-10">
+                <div class="md:col-span-5 space-y-8">
                 <h2 class="font-headline text-4xl text-on-surface leading-snug">Öppettider<br/></h2>
 
                 <p class="text-on-surface-variant leading-relaxed italic border-l-4 border-secondary pl-6">
@@ -156,7 +162,7 @@
                 </p>
 
                 <p class="text-on-surface-variant">
-                    Lunch (Tis – Fre) <span class="ml-5">kl 11.00 – 14.00</span>
+                    Lunch (Tis – Fre) <span class="ml-5">kl 11.00 – 14.00.</span>
                 </p>
 
                 <p class="text-on-surface-variant/75">
@@ -186,9 +192,10 @@
 </section>
 <!-- Lunch Menu Section -->
 <section class="py-32 bg-surface" id="lunch-menu">
-    <div class="container mx-auto px-8">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-            <div class="max-w-xl">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="border-2 border-[#77591a] rounded-sm shadow-xl bg-surface-container-lowest/50 p-8 md:p-16">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div class="max-w-xl">
                 <span class="text-secondary font-serif uppercase tracking-[0.3em] text-xs block mb-4"></span>
                 <h2 class="font-headline text-5xl text-primary">Dagens Lunch</h2>
                 <p class="mt-4 text-on-surface-variant">Tisdag till Fredag, 11:00 — 14:00.</p>
@@ -243,17 +250,18 @@
 <!-- Separation Motif -->
 <div class="thai-motif-border h-5 w-full"></div>
 <!-- A La Carte Section -->
-<section class="py-32 bg-surface-container-low" id="a-la-carte">
-    <div class="container mx-auto px-8">
-        <div class="text-center mb-24">
-            <h2 class="font-headline text-6xl text-primary mb-6">Meny</h2>
-            <div class="w-24 h-1 bg-secondary mx-auto"></div>
-        </div>
-        <div class="space-y-24">
+<section class="py-32 bg-surface" id="a-la-carte">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="border-2 border-[#77591a] rounded-sm shadow-xl bg-surface-container-lowest/50 p-8 md:p-16">
+            <div class="text-center mb-24">
+                <h2 class="font-headline text-6xl text-primary mb-6">Meny</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto"></div>
+            </div>
+            <div class="space-y-24">
             <!-- 01 Khong Wang (Grytor och Soppor) -->
             <div>
                 <h3 class="font-headline text-3xl mb-12 flex items-center gap-4">
-                    <span class="text-secondary opacity-50">01</span> Khong Wang <span class="text-sm font-body tracking-[0.4em] uppercase opacity-40 ml-4">(Grytor och Soppor)</span>
+                    <span class="text-secondary opacity-50">01</span> Grytor och Soppor <span class="text-sm font-body tracking-[0.4em] uppercase opacity-40 ml-4"></span>
                 </h3>
                 <p class="text-[10px] uppercase tracking-widest text-secondary mb-6 font-bold">Priser: Kyckling 139:- / Biff 145:- / Räkor 149:-</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
@@ -326,7 +334,7 @@
             <!-- 02 Wokade Rätter -->
             <div>
                 <h3 class="font-headline text-3xl mb-12 flex items-center gap-4">
-                    <span class="text-secondary opacity-50">02</span> Wokade Rätter <span class="text-sm font-body tracking-[0.4em] uppercase opacity-40 ml-4">(Stir-fry)</span>
+                    <span class="text-secondary opacity-50">02</span> Wokade Rätter <span class="text-sm font-body tracking-[0.4em] uppercase opacity-40 ml-4"></span>
                 </h3>
                 <p class="text-[10px] uppercase tracking-widest text-secondary mb-6 font-bold">Priser: Kyckling 139:- / Biff 145:- / Räkor 149:-</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
@@ -544,7 +552,7 @@
             <!-- 06 Skaldjur -->
             <div>
                 <h3 class="font-headline text-3xl mb-12 flex items-center gap-4">
-                    <span class="text-secondary opacity-50">06</span> Skaldjur <span class="text-sm font-body tracking-[0.4em] uppercase opacity-40 ml-4">(Tigerräkor, musslor och bläckfisk)</span>
+                    <span class="text-secondary opacity-50">06</span> Skaldjur <span class="text-sm font-body tracking-[0.4em] uppercase opacity-40 ml-4"></span>
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
                     <div class="group">
@@ -670,7 +678,7 @@
         </div>
     </div>
 </section>
-            <!-- Main Courses -->
+          <!--   Main Courses
             <div>
                 <h3 class="font-headline text-3xl mb-12 flex items-center gap-4">
                     <span class="text-secondary opacity-50">02</span> Gaeng &amp; Phad <span class="text-sm font-body tracking-[0.4em] uppercase opacity-40 ml-4">(Mains)</span>
@@ -703,10 +711,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </section>
 <!-- The Guest Book (Reviews) -->
-<section class="py-24 bg-primary text-on-primary">
+<section class="py-24 bg-[#77591a] text-on-primary">
     <div class="container mx-auto px-8">
         <div class="max-w-4xl mx-auto text-center">
 
@@ -718,7 +726,7 @@
 
                 <!-- Review 1 (Maria – 5 stjärnor) -->
                 <div class="review-slide opacity-0 transition-opacity duration-700 absolute inset-0" data-stars="5">
-                    <div class="bg-primary-container/20 p-8 rounded-sm">
+                    <div class="bg-[#77591a]-container/20 p-8 rounded-sm">
                         <div class="flex justify-center mb-4">
                             <span class="text-yellow-300 text-xl">★★★★★</span>
                         </div>
@@ -734,7 +742,7 @@
 
                 <!-- Review 2 (Dalibor – 5 stjärnor) -->
                 <div class="review-slide opacity-0 transition-opacity duration-700 absolute inset-0" data-stars="5">
-                    <div class="bg-primary-container/20 p-8 rounded-sm">
+                    <div class="bg-[#77591a]-container/20 p-8 rounded-sm">
                         <div class="flex justify-center mb-4">
                             <span class="text-yellow-300 text-xl">★★★★★</span>
                         </div>
@@ -750,7 +758,7 @@
 
                 <!-- Review 3 (Johan – 4 stjärnor) -->
                 <div class="review-slide opacity-0 transition-opacity duration-700 absolute inset-0" data-stars="4">
-                    <div class="bg-primary-container/20 p-8 rounded-sm">
+                    <div class="bg-[#77591a]-container/20 p-8 rounded-sm">
                         <div class="flex justify-center mb-4">
                             <span class="text-yellow-300 text-xl">★★★★☆</span>
                         </div>
@@ -796,38 +804,38 @@
                     <!-- Foodora -->
                     <a href="https://www.foodora.se/restaurant/njpp/thai-taste-esplanaden"
                        target="_blank"
-                       class="w-full block bg-primary text-on-primary py-5 font-serif uppercase tracking-widest text-sm rounded-full hover:bg-primary-container transition-all shadow-lg text-center">
+                       class="w-full block bg-[#77591a] text-on-primary py-5 font-serif uppercase tracking-widest text-sm rounded-full hover:bg-primary-container transition-all shadow-lg text-center">
                         Beställ via Foodora
                     </a>
 
                     <!-- Wolt -->
                     <a href="https://wolt.com/sv/swe/kalmar/restaurant/thai-taste-esplanaden-kalmar"
                        target="_blank"
-                       class="w-full block bg-primary text-on-primary py-5 font-serif uppercase tracking-widest text-sm rounded-full hover:bg-primary-container transition-all shadow-lg text-center">
+                       class="w-full block bg-[#77591a] text-on-primary py-5 font-serif uppercase tracking-widest text-sm rounded-full hover:bg-primary-container transition-all shadow-lg text-center">
                         Beställ via Wolt
                     </a>
 
                     <!-- Ring -->
                     <a href="tel:0480421940"
-                       class="w-full block bg-primary text-on-primary py-5 font-serif uppercase tracking-widest text-sm rounded-full hover:bg-primary-container transition-all shadow-lg text-center">
+                       class="w-full block bg-[#77591a] text-on-primary py-5 font-serif uppercase tracking-widest text-sm rounded-full hover:bg-primary-container transition-all shadow-lg text-center">
                         Ring: 0480‑421940
                     </a>
 
                     <!-- Google Maps -->
                     <a href="https://www.google.com/maps/place/Esplanaden+6A,+392+53+Kalmar"
                        target="_blank"
-                       class="w-full block bg-primary text-on-primary py-5 font-serif uppercase tracking-widest text-sm rounded-full hover:bg-primary-container transition-all shadow-lg text-center">
+                       class="w-full block bg-[#77591a] text-on-primary py-5 font-serif uppercase tracking-widest text-sm rounded-full hover:bg-primary-container transition-all shadow-lg text-center">
                         Hitta oss på Google Maps
                     </a>
                     <div class="relative w-full h-60 rounded-xl shadow-lg border border-white/10 overflow-hidden">
                         <img
-                                alt="Authentic Thai Dish"
-                                src="/images/orangelogo.png"
+                                alt="Thai taste"
+                                src="./images/orangelogo.png"
                                 class="w-full h-full object-cover"
                         />
 
                         <!-- Fade overlay (samma som din andra) -->
-                        <div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-background via-background/10 to-transparent"></div>
                     </div>
 
 
